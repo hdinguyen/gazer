@@ -38,18 +38,17 @@ The first version of the tracker used a basic approach: calculating the geometri
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/iris-gaze-tracker.git
-    cd iris-gaze-tracker
+    git clone https://github.com/hdinguyen/gazer.git
+    cd gazer
     ```
 
 2.  **Create a virtual environment and install dependencies:**
     This project uses `uv` for package management.
     ```bash
-    python -m venv .venv
+    uv venv # create virtual env for this project
     source .venv/bin/activate
-    uv pip install -r requirements.txt
+    uv sync
     ```
-    *(Note: If you don't have a `requirements.txt`, you can create one from `pyproject.toml` or manually install `opencv-python`, `mediapipe`, and `scikit-learn`)*
 
 3.  **Download the Face Landmarker Model:**
     Download the `face_landmarker.task` file from [MediaPipe's website](https://developers.google.com/mediapipe/solutions/vision/face_landmarker/index#models) and place it in the root directory of the project.
@@ -60,7 +59,8 @@ The first version of the tracker used a basic approach: calculating the geometri
 
 2.  **Run the main script:**
     ```bash
-    python main.py
+    uv run main.py
+    #or python main.py #after source .venv/bin/active
     ```
 
 3.  **Follow the on-screen calibration instructions.**
@@ -72,8 +72,8 @@ The first version of the tracker used a basic approach: calculating the geometri
     - After calibration, the main application will start.
     - The screen will show your face, the fitted ellipses on your irises, and a cloud of dots indicating your predicted gaze point.
     - The following controls are available:
-        - **Up Arrow**: Increase the responsiveness (speed) of the gaze cloud.
-        - **Down Arrow**: Decrease the responsiveness for smoother movement.
+        - **'u'**: Increase the responsiveness (speed) of the gaze cloud.
+        - **'d'**: Decrease the responsiveness for smoother movement.
         - **'r'**: Restart the calibration process at any time.
         - **'q'**: Quit the application.
 
