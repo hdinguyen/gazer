@@ -2,8 +2,7 @@
 
 This project is a real-time gaze and head direction tracker that uses a standard webcam. It leverages the MediaPipe Face Landmarker library to identify facial features and employs a machine learning model to estimate the user's gaze point on the screen. The system is designed with a sophisticated calibration process to personalize the model for each user.
 
-![Gaze Tracking Demo](https://youtu.be/O_dZVA1TVNI)
-
+[![Demo here](https://img.youtube.com/vi/O_dZVA1TVNI/0.jpg)](https://youtu.be/O_dZVA1TVNI)
 ## Key Features
 
 - **Real-Time Face Tracking**: Smoothly tracks the user's face and iris positions using MediaPipe.
