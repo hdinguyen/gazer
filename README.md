@@ -49,7 +49,8 @@ The first version of the tracker used a basic approach: calculating the geometri
     uv sync
     ```
 
-3.  **Download the Face Landmarker Model:**
+3.  **Download the Face Landmarker Model:** (optional)
+    Currently the face_landmarker.task was there (Jun 2025) in case this project was long time no touch in the future then you can update the `face_landmarker.task`
     Download the `face_landmarker.task` file from [MediaPipe's website](https://developers.google.com/mediapipe/solutions/vision/face_landmarker/index#models) and place it in the root directory of the project.
 
 ## How to Run
