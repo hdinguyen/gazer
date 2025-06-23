@@ -602,7 +602,9 @@ def show_webcam_feed():
             cv2.destroyAllWindows()
             return
 
-    gaze_estimator = GazeEstimator(calibration_data, w, h)
+    # gaze_estimator = GazeEstimator(calibration_data, w, h)
+    from enhanced_features import EnhancedGazeEstimator
+    gaze_estimator = EnhancedGazeEstimator(calibration_data, w, h)
     print("\nStarting main application...")
 
     gaze_speed = 0.03 # Smoothing factor: higher is faster, more responsive
@@ -638,7 +640,7 @@ def show_webcam_feed():
                 right_iris_features, _ = get_iris_features(normalized_landmarks, RIGHT_IRIS, w, h, is_normalized=True)
 
                 if left_iris_features and right_iris_features:
-                    gaze_point = gaze_estimator.predict(left_iris_features, right_iris_features)
+                    gaze_point = gaze_estimator.predict(left_iris_features, right_iris_features, normalized_landmarks)
                     
                     if gaze_point:
                         if smoothed_gaze_point is None:
