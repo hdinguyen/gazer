@@ -9,4 +9,5 @@ dependencies = [
     "maixpy>=4.10.3",
     "mediapipe>=0.10.21",
     "scikit-learn>=1.7.0",
+    "pupil-detectors>=1.0.0"
 ]
